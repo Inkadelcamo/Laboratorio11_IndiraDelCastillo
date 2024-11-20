@@ -1,0 +1,48 @@
+EJERCICIO 1- DIAGRAMA DISPERSION
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Cargar el archivo CSV
+data = pd.read_csv("Bike_Sales_Outlier_Lab (1).csv")
+
+# Corregir el nombre del atributo `columns`
+data.columns = data.columns.str.strip()
+
+# Verificar las columnas del DataFrame
+print(data.columns)
+
+# Crear un scatter plot
+plt.figure(figsize=(10, 6))
+plt.scatter(data["Order_Quantity"], data["Revenue"], color="b", alpha=0.5)
+
+# Personalizar título y etiquetas
+plt.title("Relación entre la cantidad de órdenes y los ingresos")
+plt.xlabel("Cantidad de órdenes")
+plt.ylabel("Ingresos")
+
+# Mostrar el gráfico
+plt.show()
+
+--------------------------------------PARTE 2------------------------------------------------
+EJERCICIO 1- GRAFICO DE BARRA
+
+import matplotlib.pyplot as plt
+
+#Data
+Asignatura = ["Matematicas", "Ciencias", "Historia", "Ingles", "Arte"]
+Calificaciones = [85, 90, 78, 88, 92]
+
+#Grafico de Barra
+plt.bar("Asignaturas", "Calificaciones", color="teal")
+
+#Titulos y etiquetas
+plt.title("Promedio de Calificaciones", fontsize=16)
+plt.xlabel("Asignaturas")
+plt.ylabel("Calificacion Promedio")
+
+#Mostrar el grafico
+plt.tight_layout()
+plt.show()
+
+
