@@ -65,3 +65,24 @@ plt.ylabel("Sitios Web")
 #Mostrar el grafico
 plt.tight_layout()
 plt.show()
+
+
+EJERCICIO 3- GRAFICO DE DISPERSION
+
+import matplotlib.pyplot as plt
+
+#Data
+Horas_Estudio = [8, 11, 14, 21, 27, 30, 38, 42, 45, 55]
+Calificaciones = [62, 65, 70, 74, 82, 89, 90, 95, 98, 100]
+
+#Grafico Dispersion
+plt.scatter(Horas_Estudio, Calificaciones, color = "purple", s=100, edgecolor = "black")
+
+#Titulos y etiquetas
+plt.title("Relacion entre Horas de Estudio y Rendimeinto Academico", fontsize=16)
+plt.xlabel("Horas de Estudio)")
+plt.ylabel("Calificacion")
+
+#Mostrar el grafico
+plt.tight_layout()
+plt.show()
