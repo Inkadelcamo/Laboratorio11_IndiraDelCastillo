@@ -46,3 +46,22 @@ plt.tight_layout()
 plt.show()
 
 
+EJERCICIO 2 - GRAFICO DE BARRA HORIZONTALES
+
+import matplotlib.pyplot as plt
+
+#Data
+Sitios = ["Sitio A", "Sitio B", "Sitio C", "Sitio D", "Sitio E"]
+Tiempos = [1.2, 2.5, 0.9, 3.0, 1.8]
+
+#Grafico de Barra Horizontales
+plt.barh(Sitios, Tiempos, color="blue")
+
+#Titulos y etiquetas
+plt.title("Comparacion de Tiempos de Carga de Sitio Web", fontsize=16)
+plt.xlabel("Tiempo de Carga(segundos)")
+plt.ylabel("Sitios Web")
+
+#Mostrar el grafico
+plt.tight_layout()
+plt.show()
