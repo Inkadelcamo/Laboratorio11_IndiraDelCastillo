@@ -79,10 +79,38 @@ Calificaciones = [62, 65, 70, 74, 82, 89, 90, 95, 98, 100]
 plt.scatter(Horas_Estudio, Calificaciones, color = "purple", s=100, edgecolor = "black")
 
 #Titulos y etiquetas
-plt.title("Relacion entre Horas de Estudio y Rendimeinto Academico", fontsize=16)
+plt.title("Relacion entre Horas de Estudio y Rendimiento Academico", fontsize=16)
 plt.xlabel("Horas de Estudio)")
 plt.ylabel("Calificacion")
 
 #Mostrar el grafico
+plt.tight_layout()
+plt.show()
+
+
+EJERCICIO 4 -GRAFICO DE CAJA
+
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+import pandas as pd
+
+
+#Data
+Datos_Salario ={
+"Departamento" :["Recursos Humanos"]*10 + ["Ventas"]*10 + ["Contabilidad"]*10,
+"Salario" : [3200, 3500, 3700, 3800, 3900, 4000, 4100, 4500, 4700, 4800, 5000, 5050, 5100, 5500, 5600, 5700, 5800, 5900, 6000, 6100, 6200, 6300, 6400, 6700, 6900, 7000, 7100, 7220, 7560, 7800],
+                    }
+df_salario = pd.DataFrame(Datos_Salario)
+
+
+#Grafico de Cajas
+
+sns.boxplot(x="Departamento", y="Salario", data=df_salario, palette="Set1")
+
+plt.title("Distribucion de Salarios por Departamento", fontsize=16)
+plt.xlabel("Departamento")
+plt.ylabel("Salario")
+
 plt.tight_layout()
 plt.show()
